@@ -16,7 +16,8 @@
 
       static properties = {
         age: { type: Number },
-        name: { type: String }
+        name: { type: String },
+        online: { type: Boolean }
       };
 
       get initials() {
@@ -27,7 +28,12 @@
       render() {
         return html`
           <div>
-            <div class="initials">${this.initials}</div>
+            <div class="initials">
+              ${this.initials}
+
+              ${this.online && html`<span class="online"></span>`}
+            </div>
+
             <p>${this.name}</p>
             <small>Age: ${this.age}</small>
           </div>
@@ -54,10 +60,23 @@
       border-radius: 50%;
       display: inline-block;
       padding:20px;
+      position:relative;
+    }
+
+    smart-avatar .online {
+      position: absolute;
+      display: inline-block;
+      width: 16px;
+      height:16px;
+      border-radius: 50%;
+      bottom:6px;
+      right:6px;
+      background-color: rgb(139, 216, 139);
     }
   </style>
 </head>
 <body>
+  <smart-avatar name="Marko Zabcic" age="30" online></smart-avatar>
   <smart-avatar name="Marko Zabcic" age="30"></smart-avatar>
 </body>
 </html>
