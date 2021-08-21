@@ -10,6 +10,7 @@
   <!-- Start Workshop -->
   <script type="module">
     import { LitElement, html } from 'https://cdn.skypack.dev/lit';
+    import { colorFromString } from './helpers.js'
 
     class SmartAvatar extends LitElement {
       createRenderRoot() { return this; }
@@ -21,16 +22,18 @@
       };
 
       get initials() {
-        const [firstName, lastName] = this.name.split(/\s+/);
-        return `${firstName[0]}${lastName[0]}`;
+        return this.name.split(/\s+/).map(part => part[0]).join('');
+      }
+
+      get bgColor() {
+        return colorFromString(this.name, 40, 85);
       }
 
       render() {
         return html`
           <div>
-            <div class="initials">
+            <div class="initials" style="background-color:${this.bgColor};">
               ${this.initials}
-
               ${this.online && html`<span class="online"></span>`}
             </div>
 
@@ -61,6 +64,7 @@
       display: inline-block;
       padding:20px;
       position:relative;
+      width: 3ex;
     }
 
     smart-avatar .online {
@@ -76,7 +80,7 @@
   </style>
 </head>
 <body>
-  <smart-avatar name="Marko Zabcic" age="30" online></smart-avatar>
-  <smart-avatar name="Marko Zabcic" age="30"></smart-avatar>
+  <smart-avatar name="James Cameron" age="42" online></smart-avatar>
+  <smart-avatar name="Nick Cave" age="17"></smart-avatar>
 </body>
 </html>
