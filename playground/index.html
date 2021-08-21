@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Native Web Components for Everyone with LitElement - PART 1</title>
+  <script>navigator.serviceWorker.register('/sw_native_web_components.js');</script>
+
+  <!-- Start Workshop -->
+  <script type="module">
+    import { LitElement, html } from 'https://cdn.skypack.dev/lit';
+
+    class SmartAvatar extends LitElement {
+      createRenderRoot() { return this; }
+
+      static properties = {
+        age: { type: Number },
+        name: { type: String }
+      };
+
+      get initials() {
+        const [firstName, lastName] = this.name.split(/\s+/);
+        return `${firstName[0]}${lastName[0]}`;
+      }
+
+      render() {
+        return html`
+          <div>
+            <div class="initials">${this.initials}</div>
+            <p>${this.name}</p>
+            <small>Age: ${this.age}</small>
+          </div>
+        `;
+      }
+    }
+    customElements.define('smart-avatar', SmartAvatar);
+  </script>
+
+  <style>
+    smart-avatar {
+      display:block;
+      border:1px solid #ccc;
+      padding:20px;
+      max-width: 400px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    smart-avatar .initials {
+      font-size:2em;
+      font-weight: bold;
+      background-color: #eee;
+      border-radius: 50%;
+      display: inline-block;
+      padding:20px;
+    }
+  </style>
+</head>
+<body>
+  <smart-avatar name="Marko Zabcic" age="30"></smart-avatar>
+</body>
+</html>
