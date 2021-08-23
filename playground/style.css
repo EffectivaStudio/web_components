@@ -1,8 +1,10 @@
+body {
+  padding: 20px 200px;
+}
 wsc-hello {
   display:block;
   background-image: linear-gradient(to right bottom, #ee5e6f, #f17356, #e98b41, #d8a337, #b7b242, #95bc5c, #73c47d, #52c89f);
-  margin: 40px auto 0;
-  width: 800px;
+  margin: 0 auto 1em;
   padding:20px 200px;
   font-size:1.6em;
   border-radius: 10px;
