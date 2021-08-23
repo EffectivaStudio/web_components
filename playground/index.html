@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Native Web Components for Everyone with LitElement - PART 1</title>
+  <title>Native Web Components for Everyone with LitElement</title>
   <script>navigator.serviceWorker.register('/sw_native_web_components.js');</script>
 
   <!-- Start Workshop -->
@@ -12,112 +12,42 @@
     import { LitElement, html } from 'https://cdn.skypack.dev/lit';
     import { colorFromString } from './helpers.js'
 
-    class SmartAvatar extends LitElement {
+    class WscHello extends LitElement {
       createRenderRoot() { return this; }
-
-      static properties = {
-        age: { type: Number },
-        name: { type: String },
-        online: { type: Boolean },
-        phone: { type: String },
-        email: { type: String },
-        web: { type: String },
-        occupation: { type: String }
-      };
-
-      get initials() {
-        return this.name.split(/\s+/).map(part => part[0]).join('');
-      }
-
-      get bgColor() {
-        return colorFromString(this.name, 40, 85);
-      }
 
       render() {
         return html`
           <div>
-            <div class="initials" style="background-color:${this.bgColor};">
-              ${this.initials}
-              ${this.online && html`<span class="online"></span>`}
-            </div>
-
-            <div class="main">
-              <div class="name">${this.name}</div>
-              <div class="occupation"><small>${this.occupation}</small></div>
-            </div>
-
-            <small>Age: ${this.age}</small>
-            <div class="actions">
-              ${this.email && html`<a href="mailto:${this.email}">✉️ ${this.email}</a>`}
-              ${this.phone && html`<a href="tel:${this.phone}">📞 ${this.phone}</a>`}
-              ${this.web && html`<a href="https://${this.web}" target="_blank" rel="nofollow">🔗 ${this.web}</a>`}
-            </div>
+            <h1>Web Summer Camp 2021</h1>
+            <p>September 2nd - 3rd 2021, ŠIBENIK, CROATIA</p>
           </div>
         `;
       }
     }
 
-    customElements.define('smart-avatar', SmartAvatar);
+    customElements.define('wsc-hello', WscHello);
   </script>
 
   <style>
-    smart-avatar {
+    wsc-hello {
       display:block;
-      border:1px solid #ccc;
-      padding:20px;
-      max-width: 240px;
+      background-image: linear-gradient(to right bottom, #084887, #614c96, #9c4c95, #cc4f87, #ee5e6f, #f17356, #e98b41, #d8a337, #b7b242, #95bc5c, #73c47d, #52c89f);
+      margin:100px auto 0;
+      width: 600px;
+      padding:200px;
+      font-size:2em;
       border-radius: 10px;
       text-align: center;
-      margin:10px;
+      color:#fff;
     }
 
-    smart-avatar .initials {
-      font-size:2em;
-      font-weight: bold;
-      background-color: #eee;
-      border-radius: 50%;
-      display: inline-block;
-      padding:20px;
-      position:relative;
-      width: 3ex;
-      margin-bottom:0.5em;
-    }
-
-    smart-avatar .name {
-      font-size:1.1em;
-    }
-
-    smart-avatar .occupation{
-      color:#666;
-      margin-bottom:1em;
-    }
-
-    smart-avatar .online {
-      position: absolute;
-      display: inline-block;
-      width: 16px;
-      height:16px;
-      border-radius: 50%;
-      bottom:6px;
-      right:6px;
-      background-color: rgb(139, 216, 139);
-    }
-
-    smart-avatar .actions a {
-      text-decoration: none;
-      border:1px solid #999;
-      padding:4px;
-      border-radius:5px;
-      display: inline-block;
-      margin:5px;
-      color: #666;
+    wsc-hello p {
+      font-size:0.7em;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
-  <smart-avatar name="Keith Richards" occupation="Musician"   age="78" online></smart-avatar>
-  <smart-avatar name="James Cameron"  occupation="Filmmaker"  age="42" phone="+38598777888" online></smart-avatar>
-  <smart-avatar name="Nick Cave"      occupation="Musician"   age="17" phone="+38598777888" email="nick@example.com"></smart-avatar>
-  <smart-avatar name="Marko Žabčić"   occupation="Programmer" age="37" phone="+38598777888" email="marko@effectiva.hr" web="effectiva.hr"></smart-avatar>
+  <wsc-hello></wsc-hello>
 </body>
 </html>
