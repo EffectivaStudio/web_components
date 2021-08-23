@@ -1,5 +1,11 @@
+:root {
+  --wsc-blue: #084887;
+  --wsc-green: #52c89f;
+}
+
 body {
   padding: 20px 200px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 wsc-hello {
   display:block;
@@ -20,4 +26,34 @@ wsc-hello p {
   margin-bottom: 0;
   font-size:0.7em;
   font-style: italic;
+}
+
+.date-view {
+  background-color: #f8f8f8;
+  border:1px solid #ccc;
+  padding:20px;
+  border-radius: 6px;
+  width: 100px;
+  text-align: center;
+}
+
+.date-view .day {
+  font-size:2em;
+}
+
+.date-view .month {
+  text-transform: uppercase;
+  font-size:1.2em;
+  color: var(--wsc-blue);
+  font-weight: bold;;
+}
+
+
+.date-view .year {
+
+}
+
+
+.dates .date-view {
+  display: inline-block;
 }
