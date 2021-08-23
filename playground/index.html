@@ -8,44 +8,9 @@
   <script>navigator.serviceWorker.register('/sw_native_web_components.js');</script>
 
   <!-- Start Workshop -->
-  <script type="module">
-    import { LitElement, html } from 'https://cdn.skypack.dev/lit';
-    import { colorFromString } from './helpers.js'
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./components/wsc-hello.js"></script>
 
-    class WscHello extends LitElement {
-      createRenderRoot() { return this; }
-
-      render() {
-        return html`
-          <div>
-            <h1>Web Summer Camp 2021</h1>
-            <p>September 2nd - 3rd 2021, ŠIBENIK, CROATIA</p>
-          </div>
-        `;
-      }
-    }
-
-    customElements.define('wsc-hello', WscHello);
-  </script>
-
-  <style>
-    wsc-hello {
-      display:block;
-      background-image: linear-gradient(to right bottom, #ee5e6f, #f17356, #e98b41, #d8a337, #b7b242, #95bc5c, #73c47d, #52c89f);
-      margin:100px auto 0;
-      width: 600px;
-      padding:200px;
-      font-size:2em;
-      border-radius: 10px;
-      text-align: center;
-      color:#fff;
-    }
-
-    wsc-hello p {
-      font-size:0.7em;
-      font-style: italic;
-    }
-  </style>
 </head>
 <body>
   <wsc-hello></wsc-hello>
