@@ -4,14 +4,21 @@ We already have HTML and CSS ready in `index.html` and `style.css` but now we wa
 
 ## TODO
 
- * In `components/wsc-date.js` you will find empy component which is already included in page
+  * `<wsc-date value="Mon, 02 Sep 2021"></wsc-date>`
 
- * Date component should accept any string from wich we can parse a `Date`
+  * In `components/wsc-date.js` you will find empty component which is already included in page
+
+  * Date component should accept any string from which we can parse a `Date`
+
+  * Adjust CSS selectors in `style.css`
+
+  * Remove plain date-view divs an keep only web components
 
 
-## Bonus
+### Bonus
 
-Component can also accept unixTimestamp
+  * Component can also accept unixTimestamp
+  * Use current date if value attribute is empty
 
 
 ## Hints:
@@ -39,5 +46,13 @@ date.getTime()
 
 ## Formatting
 ```js
+// Year
+date.toLocaleString('en', { year: 'numeric' });
 
+// Month
+date.toLocaleString('en', { month: 'short' });
+
+// Day
+date.toLocaleString('en', {day: "2-digit"});
 ```
+
