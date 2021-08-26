@@ -36,6 +36,7 @@ wsc-hello p {
   border-radius: 6px;
   width: 100px;
   text-align: center;
+  margin:5px;
 }
 
 .date-view .day {
