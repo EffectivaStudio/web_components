@@ -29,7 +29,8 @@ wsc-hello p {
   font-style: italic;
 }
 
-.date-view {
+wsc-date {
+  display: block;
   background-color: #f8f8f8;
   border:1px solid #ccc;
   padding:20px;
@@ -38,12 +39,10 @@ wsc-hello p {
   text-align: center;
   margin:5px;
 }
-
-.date-view .day {
+wsc-date .day {
   font-size:2em;
 }
-
-.date-view .month {
+wsc-date .month{
   text-transform: uppercase;
   font-size:1.2em;
   color: var(--primary);
