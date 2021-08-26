@@ -49,6 +49,6 @@ wsc-date .month{
   font-weight: bold;;
 }
 
-.dates .date-view {
+.dates wsc-date {
   display: inline-block;
 }
