@@ -28,123 +28,71 @@
   <div class="program">
     <h2 class="section-title">Program</h2>
 
-    <h3 class="program-title">Day 0 - Wednesday, Sep 1st</h3>
-
-    <div class="track">
-      <div class="col">
-        <div class="time">18:00 - 20:00</div>
-      </div>
-      <div class="col">
-        <h1 class="title">
-          Help Desk & Hanging Out (over Welcome Drinks)
-        </h1>
-        <div class="description">In front of the convention center.</div>
-      </div>
+    <div class="program-title">
+      <wsc-date value="Mon, 01 Sep 2021"></wsc-date> <span>Day 0 - Wednesday</span>
     </div>
+    <!-- <h3 class="program-title">Day 0 - Wednesday, Sep 1st</h3> -->
+
+    <wsc-track
+    title="Help Desk & Hanging Out (over Welcome Drinks)"
+    description="In front of the convention center."
+    start="18:00"
+    end="20:00"></wsc-track>
 
     <h3 class="program-title">Day 1 - Thursday, Sep 2nd</h3>
 
-    <div class="track">
-      <div class="col">
-        <div class="time">7:30 - 8:00</div>
-      </div>
-      <div class="col">
-        <h1 class="title">
-          Morning Recreation
-        </h1>
-        <div class="description">Meeting at the terrace of Hotel Ivan. Go for a swim early in the morning and start the day afresh.</div>
-      </div>
-    </div>
+    <wsc-track
+    title="Morning Recreation"
+    description="Meeting at the terrace of Hotel Ivan. Go for a swim early in the morning and start the day afresh."
+    start="7:30"
+    end="8:00"></wsc-track>
 
-    <div class="track">
-      <div class="col">
-        <div class="time">8:30 - 9:20</div>
-      </div>
-      <div class="col">
-        <h1 class="title">
-          Registration & Coffee Hangout
-        </h1>
-      </div>
-    </div>
+    <wsc-track
+    title="Registration & Coffee Hangout"
+    start="8:30"
+    end="9:20"></wsc-track>
 
-    <div class="track">
-      <div class="col">
-        <div class="time">9:20 - 12:30</div>
-      </div>
-      <div class="col">
-        <h1 class="title">
-          The Most Unusual Opening Ever
-        </h1>
-        <div class="description">In front of the convention center.</div>
-      </div>
-    </div>
+    <wsc-track
+    title="The Most Unusual Opening Ever"
+    description="In front of the convention center."
+    start="9:20"
+    end="9:30"></wsc-track>
 
-    <div class="track">
-      <div class="col">
-        <div class="time">09:30 - 12:30</div>
-        <div class="note">(with break 10:50-11:10)</div>
-      </div>
-      <div class="col">
-        <h1 class="title">
-          <a href="https://2021.websummercamp.com/native-web-components-for-everyone-with-litelement">
-            Native Web Components for Everyone with LitElement
-          </a>
-        </h1>
-        <div class="by">by <a href="https://2021.websummercamp.com/js#speakers" class="author">Marko Žabčić</a>, Effectiva</div>
-      </div>
-    </div>
+    <wsc-track
+    title="Native Web Components for Everyone with LitElement"
+    href="/native-web-components-for-everyone-with-litelement"
+    note="(with break 10:50-11:10)"
+    start="9:30"
+    end="12:30"
+    author="Marko Žabčić"
+    company="Effectiva"></wsc-track>
 
+    <wsc-track
+    title="Lunch"
+    description="Complementary lunch in the restaurant of Hotel Ivan"
+    start="12:30"
+    end="13:30"></wsc-track>
 
-    <div class="track">
-      <div class="col">
-        <div class="time">12:30 - 13:30</div>
-      </div>
-      <div class="col">
-        <h1 class="title">
-          Lunch
-        </h1>
-        <div class="description">Complementary lunch in the restaurant of Hotel Ivan</div>
-      </div>
-    </div>
+    <wsc-track
+    title="How to build a real-time interactive chart with React Native and D3"
+    href="/how-to-build-a-real-time-interactive-animated-chart-with-react-native-and-d3"
+    note="(with break 14:50-15:10)"
+    start="12:30"
+    end="16:30"
+    author="Milan Rakoš"
+    company="Netgen"></wsc-track>
 
-    <div class="track">
-      <div class="col">
-        <div class="time">12:30 - 13:30</div>
-        <div class="note">(with break 14:50-15:10)</div>
-      </div>
-      <div class="col">
-        <h1 class="title">
-          <a href="https://2021.websummercamp.com/how-to-build-a-real-time-interactive-animated-chart-with-react-native-and-d3">
-            How to build a real-time interactive chart with React Native and D3
-          </a>
-        </h1>
-        <div class="by">by <a href="https://2021.websummercamp.com/js#speakers" class="author">Milan Rakoš</a>, Netgen</div>
-      </div>
-    </div>
+    <wsc-track
+    title="Lounge with the Experts"
+    description="En Vogue Beach Bar"
+    start="17:30"
+    end="19:30"></wsc-track>
 
-    <div class="track">
-      <div class="col">
-        <div class="time">17:00 - 19:30</div>
-      </div>
-      <div class="col">
-        <h1 class="title">
-          Lounge with the Experts
-        </h1>
-        <div class="description">En Vogue Beach Bar</div>
-      </div>
-    </div>
-
-    <div class="track">
-      <div class="col">
-        <div class="time">19:30 - 21:00</div>
-      </div>
-      <div class="col">
-        <h1 class="title">
-          All Aboard Dinner
-        </h1>
-        <div class="description">Complimentary dinner at Hotel Ivan restaurant. Enjoy the lovely ambient of the restaurant in the pleasant company of other participants and companions.</div>
-      </div>
-    </div>
+    <wsc-track
+    title="All Aboard Dinner"
+    description="Complimentary dinner at Hotel Ivan restaurant. Enjoy the lovely ambient of the restaurant in the pleasant company of other participants and companions."
+    start="19:30"
+    end="21:00"></wsc-track>
 
 </body>
 </html>

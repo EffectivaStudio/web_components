@@ -138,3 +138,6 @@ wsc-date .month{
 .track .time {
   margin-bottom:1em;
 }
+
+.program-title wsc-date{display: inline-block; font-size:16px; padding: 4px; vertical-align: middle}
+.program-title span{font-size:2em; vertical-align: middle;}
