@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'https://cdn.skypack.dev/lit';
 
 class WscTrack extends LitElement {
+  createRenderRoot() { return this; }
 
   static properties = {
     start: { type: String },
@@ -12,68 +13,6 @@ class WscTrack extends LitElement {
     note: { type: String },
     href: { type: String }
   }
-
-  static styles = css`
-    :host {
-      font-size:1.4em;
-      color: var(--primary);
-      border:1px solid #ccc;
-      border-width: 1px 0;
-      margin-top:-1px;
-      display: flex;
-    }
-
-    a {
-      color: var(--primary);
-      position: relative;
-      text-decoration: none;;
-    }
-
-    a::before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: calc(100% + .1em);
-      height: .33em;
-      left: -.05em;
-      bottom: .1em;
-      -webkit-transition: all .15s ease;
-      transition: all .15s ease;
-      background-color: #f8d84b;
-      z-index: -1;
-    }
-
-    a:hover::before {
-      height:1em;
-    }
-
-    .note, .description {
-      margin:0.5em 0;
-      font-style: italic;
-    }
-
-    .col {
-      padding:16px;
-      flex:100%;
-    }
-
-    .col:first-child {
-      flex:1 200px;
-    }
-
-    .author {
-      font-weight: bold;
-    }
-
-    .title {
-      font-size:1.4em;
-      margin:0 0 0.5em;
-    }
-
-    .time {
-      margin-bottom:1em;
-    }
-  `
 
   renderNote() {
     return this.note && html`<div class="note">${this.note}</div>`

@@ -78,7 +78,7 @@ wsc-date .month{
   margin:0;
 }
 
-.track {
+wsc-track {
   font-size:1.4em;
   color: var(--primary);
   border:1px solid #ccc;
@@ -87,13 +87,13 @@ wsc-date .month{
   display: flex;
 }
 
-.track a {
+wsc-track a {
   color: var(--primary);
   position: relative;
   text-decoration: none;;
 }
 
-.track a::before {
+wsc-track a::before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -107,35 +107,35 @@ wsc-date .month{
 	z-index: -1;
 }
 
-.track a:hover::before {
+wsc-track a:hover::before {
   height:1em;
 }
 
-.track .note,
-.track .description{
+wsc-track .note,
+wsc-track .description{
   margin:0.5em 0;
   font-style: italic;
 }
 
-.track .col{
+wsc-track .col{
   padding:16px;
   flex:100%;
 }
 
-.track .col:first-child {
+wsc-track .col:first-child {
   flex:1 200px;
 }
 
-.track .author{
+wsc-track .author{
   font-weight: bold;
 }
 
-.track .title {
+wsc-track .title {
   font-size:1.4em;
   margin:0 0 0.5em;
 }
 
-.track .time {
+wsc-track .time {
   margin-bottom:1em;
 }
 
