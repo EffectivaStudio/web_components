@@ -1,11 +1,38 @@
-import { LitElement, html } from 'https://cdn.skypack.dev/lit';
+import { LitElement, html, css } from 'https://cdn.skypack.dev/lit';
 
 class WscDate extends LitElement {
-  createRenderRoot() { return this; }
 
   static properties = {
     value: { type: String }
   }
+
+  static styles = css`
+    :host {
+      font-family: Arial, Helvetica, sans-serif;
+      color:#333;
+      display: block;
+      background-color: #f8f8f8;
+      border: 1px solid #ccc;
+      padding:20px;
+      border-radius: 6px;
+      width: 100px;
+      text-align: center;
+      margin:5px;
+      line-height:1.3em;
+    }
+
+    .day {
+      line-height:1em;
+      color: var(--dayColor);
+      font-size:var(--dayFontSize, 2em);
+    }
+    .month{
+      text-transform: uppercase;
+      font-size:var(--monthFontSize, 1.2em);
+      color: var(--monthColor, var(--primary, #009));
+      font-weight: bold;
+    }
+    `
 
   get date() {
     if(!this.value) { return new Date() }

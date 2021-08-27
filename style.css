@@ -30,25 +30,6 @@ wsc-hello p {
   font-style: italic;
 }
 
-wsc-date {
-  display: block;
-  background-color: #f8f8f8;
-  border:1px solid #ccc;
-  padding:20px;
-  border-radius: 6px;
-  width: 100px;
-  text-align: center;
-  margin:5px;
-}
-wsc-date .day {
-  font-size:2em;
-}
-wsc-date .month{
-  text-transform: uppercase;
-  font-size:1.2em;
-  color: var(--primary);
-  font-weight: bold;;
-}
 
 .dates wsc-date {
   display: inline-block;
@@ -141,3 +122,14 @@ wsc-track .time {
 
 .program-title wsc-date{display: inline-block; font-size:16px; padding: 4px; vertical-align: middle}
 .program-title span{font-size:2em; vertical-align: middle;}
+
+
+.special {
+  color:white;
+  font-size:2em;
+  width: 300px;
+  background: var(--primary);
+  --monthColor:var(--secondary);
+  --dayFontSize:3em;
+  --monthFontSize:1em;
+}
