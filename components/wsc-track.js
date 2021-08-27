@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'https://cdn.skypack.dev/lit';
+import { LitElement, html } from 'https://cdn.skypack.dev/lit';
 
 class WscTrack extends LitElement {
   createRenderRoot() { return this; }
