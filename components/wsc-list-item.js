@@ -47,6 +47,15 @@ class WscListItem extends LitElement {
       color:var(--primary);
       font-size:2em;
     }
+
+    button{
+      background:var(--primary);
+      padding:10px;
+      width:80px;
+      color:white;
+      border:none;
+      font-size:1.2em;
+    }
   `
 
   constructor() {
