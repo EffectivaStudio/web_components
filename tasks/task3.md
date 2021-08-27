@@ -42,6 +42,9 @@ For this we are going to use existing `wsc-date.js`
 ```css
   h1 {
     color: var(--primary, blue)
+
+    /* You can also do this :-) */
+    color: var(--monthColor, var(--primary, #009));
   }
 ```
 
