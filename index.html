@@ -12,78 +12,9 @@
   <script type="module" src="./components/index.js"></script>
 </head>
 <body>
-  <wsc-hello></wsc-hello>
-
-  <h2 class="section-title">Program</h2>
-
-  <wsc-list-item>
-    <wsc-date slot="left" value="Wed, 01 Sep 2021"></wsc-date>
-    <h1 slot="right">Day 0 - Wednesday</h1>
-
-    <wsc-track
-    title="Help Desk & Hanging Out (over Welcome Drinks)"
-    description="In front of the convention center."
-    start="18:00"
-    end="20:00"></wsc-track>
-  </wsc-list-item>
-
-  <wsc-list-item>
-    <wsc-date slot="left" value="Thu, 02 Sep 2021"></wsc-date>
-    <h1 slot="right">Day 1 - Thursday</h1>
-
-    <wsc-track
-    title="Morning Recreation"
-    description="Meeting at the terrace of Hotel Ivan. Go for a swim early in the morning and start the day afresh."
-    start="7:30"
-    end="8:00"></wsc-track>
-
-    <wsc-track
-    title="Registration & Coffee Hangout"
-    start="8:30"
-    end="9:20"></wsc-track>
-
-    <wsc-track
-    title="The Most Unusual Opening Ever"
-    description="In front of the convention center."
-    start="9:20"
-    end="9:30"></wsc-track>
-
-    <wsc-track
-    title="Native Web Components for Everyone with LitElement"
-    href="/native-web-components-for-everyone-with-litelement"
-    note="(with break 10:50-11:10)"
-    start="9:30"
-    end="12:30"
-    author="Marko Žabčić"
-    company="Effectiva"></wsc-track>
-
-    <wsc-track
-    title="Lunch"
-    description="Complementary lunch in the restaurant of Hotel Ivan"
-    start="12:30"
-    end="13:30"></wsc-track>
-
-    <wsc-track
-    title="How to build a real-time interactive chart with React Native and D3"
-    href="/how-to-build-a-real-time-interactive-animated-chart-with-react-native-and-d3"
-    note="(with break 14:50-15:10)"
-    start="12:30"
-    end="16:30"
-    author="Milan Rakoš"
-    company="Netgen"></wsc-track>
-
-    <wsc-track
-    title="Lounge with the Experts"
-    description="En Vogue Beach Bar"
-    start="17:30"
-    end="19:30"></wsc-track>
-
-    <wsc-track
-    title="All Aboard Dinner"
-    description="Complimentary dinner at Hotel Ivan restaurant. Enjoy the lovely ambient of the restaurant in the pleasant company of other participants and companions."
-    start="19:30"
-    end="21:00"></wsc-track>
-  </wsc-list-item>
+  <wsc-lazy-load href="/program.html">
+    <h1>Loading content please wait...</h1>
+  </wsc-lazy-load>
 
 </body>
 </html>
